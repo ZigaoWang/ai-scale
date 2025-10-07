@@ -4,11 +4,11 @@
 > [!NOTE]
 > Views and interpretations here are my opinion only.
 
-_Last synced (auto): 
+_Last synced (auto): 2025-10-07 13:35:56 UTC_
 
 ---
 
-# 我对于 AI 和学生的看法：AI Scale
+# 我对于 AI 和学生的看法：AI Scale 项目
 
 我最近一直在想一个问题：AI 在学校和学习中到底应该怎么用、怎么被看待。
 
