@@ -51,7 +51,7 @@ jobs:
             echo "> Views and interpretations here are my opinion only."
             echo
             if [ -n "$TS" ]; then
-              echo "_Last synced (auto): $TS_"
+              echo "_Last synced (auto): ${TS}_"
               echo
             fi
             echo "---"
