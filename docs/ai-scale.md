@@ -1,4 +1,4 @@
-# AI Scale
+# 我对于 AI 和学生的看法：AI Scale
 
 我最近一直在想一个问题：AI 在学校和学习中到底应该怎么用、怎么被看待。
 
@@ -177,7 +177,7 @@ AI 文章更趋同、更保守，而纯手写组更有独立思考和创造性�
 
 [Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task](https://www.brainonllm.com/)
 
-[2506.08872v1.pdf](https://resv2.craft.do/user/full/c784f019-3d79-d256-cf04-0a547a816432/doc/1A0ED113-46D8-4745-99F0-AEEC5679D207/34AC49F5-4DE4-4930-A88C-94B293BD22CD_2/8lmlX98uF4DdRKTsjDdpLmREpHkNPuDCK0PPbs0Uxn4z/2506.08872v1.pdf)
+[2506.08872v1.pdf](content/ai-scale.textbundle/assets/2506.08872v1.pdf)
 
 “MIT 的 “Your Brain on ChatGPT” 研究通过 EEG（脑电图）技术，对三组写作参与者（使用 LLM 辅助组、使用搜索引擎组、纯脑力组）在连续几次写论文的过程中进行对比。研究发现，随着外部辅助工具（尤其是 LLM）介入，参与者的脑网络连接度整体下降；而在跨组切换时（如原来用 LLM 的人在后期被要求不使用工具，或原本不用工具的人后来尝试用 LLM）会出现认知负荷与回忆力的显著变化。他们在访谈中还发现，用 LLM 的写作者对自己作品的“拥有感”较低。研究提示：尽管 LLM 帮助在短期内可能提高效率，但长期使用可能会影响认知参与度、记忆与学习深度。” --ChatGPT
 
