@@ -1,6 +1,4 @@
-# AI Scale (from Craft TextBundle)
-
-_Last sync: 
+_Last synced (auto): 
 
 ---
 
@@ -56,7 +54,7 @@ AI 几乎可以参与整个任务，学生主要负责指导、挑选、整合 A
 
 AI 被当作创作的一部分，学生和老师一起探索 AI 能做什么，尝试新的写作或创作方式。
 
-![Image.png](assets/Image.png)
+![Image.png](content/ai-scale.textbundle/assets/Image.png)
 
 这里是一个 example：
 
@@ -93,27 +91,27 @@ AIAS 是一个很好的起点，而 AI Scale 也许能让这件事变得更具�
 
 1. 他们最早发表在 JUTLP 的文章把 AI Assessment Scale（AIAS）清楚地定义成一个“先说清楚、再去做”的评估框架：老师根据学习目标选定允许的 AI 使用层级，从 No AI 到 Full AI / Exploration，并把要求写进任务说明里，目的是提高透明度、而不是做事后检测。文章也强调，AIAS 本质上是帮助重写评估与政策的“共同语言”，可以在高等教育，也可以在 K-12 使用。
 
-[JUTLP_AI_Assessment_Scale_final.pdf](assets/JUTLP_AI_Assessment_Scale_final.pdf)
+[JUTLP_AI_Assessment_Scale_final.pdf](content/ai-scale.textbundle/assets/JUTLP_AI_Assessment_Scale_final.pdf)
 
 2. 英国越南大学（BUV）的学校级试点给出了比较直观的证据：在用 AIAS 重设计作业、配合教师培训和明确政策后，跟 GenAI 相关的学术不端显著下降，学生会更主动、作品也更有多模态探索。作者总结，关键不在“抓”，而在“让学生知道怎样合规地用、怎么说清楚自己用了多少”。
 
-[x3_9434_38-55.pdf](assets/x3_9434_38-55.pdf)
+[x3_9434_38-55.pdf](content/ai-scale.textbundle/assets/x3_9434_38-55.pdf)
 
 3. 一篇 2025 年的评论专门谈“哪些做法是错的、该怎么改”：比如把带回家作业生硬标成 No AI、只改标签不改任务、忽视可及性与公平、用控制思路逼出“表演式合规”。作者建议用“以设计代替检测”的路线：按学习结果选层级、要求轻量级过程证据、在评分标准里纳入判断力与学生的 voice、分阶段收集证据，并事先规划设备与工具的可获得性。
 
-[3535-Article Text-10147-3-10-20250913.pdf](assets/3535-Article%20Text-10147-3-10-20250913.pdf)
+[3535-Article Text-10147-3-10-20250913.pdf](content/ai-scale.textbundle/assets/3535-Article%20Text-10147-3-10-20250913.pdf)
 
 4. 语言类里有一个专门的改编版本 EAP-AIAS：因为 EAP 同时评估语言能力与学术社会化，所以更需要平衡“真实性”和“可判别性”。论文建议在写作、展示、研究等任务里明确允许的层级，要求前后版本或反思说明来呈现过程，并把“评估学生的 evaluative judgement（判断与取舍）”当成重点能力。
 
-[2408.01075v1.pdf](assets/2408.01075v1.pdf)
+[2408.01075v1.pdf](content/ai-scale.textbundle/assets/2408.01075v1.pdf)
 
 5. 另一个面向 EFL 的实践文章，把更新后的 AIAS 拿到课堂里用，给出写作与翻译教学的具体路径（尤其是 Level 2、3、4）：允许用 AI 头脑风暴、提纲、语言层面的改写与反馈，但配套过程证据与反思，目的是提升 AI 素养与真实能力，而不是让 AI 替代学习。
 
-[2501.00964v1.pdf](assets/2501.00964v1.pdf)
+[2501.00964v1.pdf](content/ai-scale.textbundle/assets/2501.00964v1.pdf)
 
 6. 最新一篇 JUTLP 的“再想象”把框架进一步非层级化，明确 AIAS 是“沟通工具 + 任务重设计框架”，并补充了面向未来的 AI Exploration 层级；同时更强调公平、隐私、披露与数据处理等伦理要求，提醒学校用公开透明替代“安全剧场”。
 
-[JUTLP+Final+Perkins_JUTLP_2025.pdf](assets/JUTLP+Final+Perkins_JUTLP_2025.pdf)
+[JUTLP+Final+Perkins_JUTLP_2025.pdf](content/ai-scale.textbundle/assets/JUTLP+Final+Perkins_JUTLP_2025.pdf)
 
 我自己的体会是：这 6 篇报告几乎都在告诉我们——别再把 AI 当成“要不要”的问题，而是把它当成“怎么设计进去”的问题。对我想做的 AI Scale 来说，直接可用的做法有几条：一是在任务开始前就选层级并写清楚边界；二是让学生交轻量的过程证据（关键 prompt、版本对比、简短反思）；三是在评分表里加入“判断力与取舍”的分项；四是提前说明披露与数据伦理；五是按学科提供不同的模板。这样，老师不用猜、学生不必藏，大家都能更清楚地表达“我用了多少 AI、用在了哪里、为什么这样用”。
 
@@ -147,7 +145,7 @@ AIAS 是一个很好的起点，而 AI Scale 也许能让这件事变得更具�
 
 1. 第一个视频：
 
-[MIT最新的研究发现_20251007204412.mp4](assets/MIT%E6%9C%80%E6%96%B0%E7%9A%84%E7%A0%94%E7%A9%B6%E5%8F%91%E7%8E%B0_20251007204412.mp4)
+[MIT最新的研究发现_20251007204412.mp4](content/ai-scale.textbundle/assets/MIT%E6%9C%80%E6%96%B0%E7%9A%84%E7%A0%94%E7%A9%B6%E5%8F%91%E7%8E%B0_20251007204412.mp4)
 
 总结：
 
@@ -189,7 +187,7 @@ AI 文章更趋同、更保守，而纯手写组更有独立思考和创造性�
 
 2. 第二个视频：
 
-[教育已经变天而AI会_20251007204251.mp4](assets/%E6%95%99%E8%82%B2%E5%B7%B2%E7%BB%8F%E5%8F%98%E5%A4%A9%E8%80%8CAI%E4%BC%9A_20251007204251.mp4)
+[教育已经变天而AI会_20251007204251.mp4](content/ai-scale.textbundle/assets/%E6%95%99%E8%82%B2%E5%B7%B2%E7%BB%8F%E5%8F%98%E5%A4%A9%E8%80%8CAI%E4%BC%9A_20251007204251.mp4)
 
 我以前一直以为，未来的人大概会分成两种：一类是会用 AI 的人，另一类是不会用 AI 的人。
 
