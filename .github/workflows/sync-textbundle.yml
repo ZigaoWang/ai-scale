@@ -2,7 +2,7 @@ name: Sync Craft TextBundle
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'content/ai-scale.textbundle/**'
   workflow_dispatch: {}
@@ -14,10 +14,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (with LFS)
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
-      - name: Prepare output
+      - name: Prepare output folder
         run: mkdir -p docs
 
       - name: Copy TextBundle content
@@ -34,16 +36,20 @@ jobs:
       - name: Rewrite asset paths in Markdown (if needed)
         if: hashFiles('docs/ai-scale.md') != ''
         run: |
-          # If Craft wrote image links like: ![](assets/xyz.png)
-          # rewrite them to the repo path: content/ai-scale.textbundle/assets/xyz.png
+          # Convert ![](assets/xyz.png) → !(content/ai-scale.textbundle/assets/xyz.png)
           sed -E 's@\]\((assets/[^)]+)\)@]\(content/ai-scale.textbundle/\1\)@g' -i docs/ai-scale.md
 
       - name: Generate README.md
         run: |
+          TS="$(date -u +"%Y-%m-%d %H:%M:%S UTC")"
           OUT="README.md"
           {
-            # Only show the line if TS is non-empty
-            TS="$(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            echo "> [!WARNING]"
+            echo "> This synced copy may not be up to date."
+            echo
+            echo "> [!NOTE]"
+            echo "> Views and interpretations here are my opinion only."
+            echo
             if [ -n "$TS" ]; then
               echo "_Last synced (auto): $TS_"
               echo
@@ -58,13 +64,13 @@ jobs:
             echo
           } > "$OUT"
 
-      - name: Commit changes
+      - name: Commit changes (docs + README only)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
+          if [ -n "$(git status --porcelain docs README.md)" ]; then
             git add docs README.md
-            git commit -m "chore(sync): update from Craft TextBundle"
+            git commit -m "chore(sync): update README and docs from Craft TextBundle"
             git push
           else
             echo "No changes to commit."
