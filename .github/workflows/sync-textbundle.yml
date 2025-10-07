@@ -1,12 +1,11 @@
 name: Sync Craft TextBundle
 
 on:
-  workflow_dispatch: {}
   push:
+    branches: [ main ]
     paths:
       - 'content/ai-scale.textbundle/**'
-  schedule:
-    - cron: "0 */6 * * *"  # every 6 hours
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -18,27 +17,46 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Unpack TextBundle
+      - name: Prepare output
+        run: mkdir -p docs
+
+      - name: Copy TextBundle content
         run: |
-          mkdir -p docs/assets
-          # The TextBundle is just a folder; copy files out
-          cp content/ai-scale.textbundle/text.markdown docs/ai-scale.md || cp content/ai-scale.textbundle/text.html docs/ai-scale.html
-          if [ -d content/ai-scale.textbundle/assets ]; then
-            cp -r content/ai-scale.textbundle/assets/* docs/assets/ || true
+          if [ -f content/ai-scale.textbundle/text.markdown ]; then
+            cp content/ai-scale.textbundle/text.markdown docs/ai-scale.md
+          elif [ -f content/ai-scale.textbundle/text.html ]; then
+            cp content/ai-scale.textbundle/text.html docs/ai-scale.html
+          else
+            echo "No text.markdown or text.html found in TextBundle."
+            exit 1
           fi
+
+      - name: Rewrite asset paths in Markdown (if needed)
+        if: hashFiles('docs/ai-scale.md') != ''
+        run: |
+          # If Craft wrote image links like: ![](assets/xyz.png)
+          # rewrite them to the repo path: content/ai-scale.textbundle/assets/xyz.png
+          sed -E 's@\]\((assets/[^)]+)\)@]\(content/ai-scale.textbundle/\1\)@g' -i docs/ai-scale.md
 
       - name: Generate README.md
         run: |
-          TS="$(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          OUT="README.md"
           {
-            echo "# AI Scale (from Craft TextBundle)"
-            echo
-            echo "_Last sync: $TS_"
-            echo
+            # Only show the line if TS is non-empty
+            TS="$(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            if [ -n "$TS" ]; then
+              echo "_Last synced (auto): $TS_"
+              echo
+            fi
             echo "---"
             echo
-            cat docs/ai-scale.md 2>/dev/null || cat docs/ai-scale.html 2>/dev/null
-          } > README.md
+            if [ -f docs/ai-scale.md ]; then
+              cat docs/ai-scale.md
+            else
+              cat docs/ai-scale.html
+            fi
+            echo
+          } > "$OUT"
 
       - name: Commit changes
         run: |
@@ -51,4 +69,3 @@ jobs:
           else
             echo "No changes to commit."
           fi
-
