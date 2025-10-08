@@ -4,7 +4,7 @@
 > [!NOTE]
 > Views and interpretations here are my opinion only.
 
-_Last synced (auto): 2025-10-07 13:35:56 UTC_
+_Last synced (auto): 2025-10-08 12:51:59 UTC_
 
 ---
 
@@ -201,4 +201,4 @@ AI 文章更趋同、更保守，而纯手写组更有独立思考和创造性�
 
 这也是我想继续把 AI Scale 做下去的原因。我希望它不仅仅是一个让老师了解学生用了多少 AI 的工具，更是一个帮助学生学会怎么正确地用 AI 的系统。
 
-AI 不该替代思考，而应该让思考变得更深。
+**AI 不该替代思考，而应该让思考变得更深。**
